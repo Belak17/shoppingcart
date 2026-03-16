@@ -8,10 +8,12 @@ import com.belak.shoppingcart.repository.CategoryRepository;
 import com.belak.shoppingcart.repository.ProductRepository;
 import com.belak.shoppingcart.request.AddProductRequest;
 import com.belak.shoppingcart.request.ProductUpdateRequest;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ProductService implements  IProductService {
     private final ProductRepository productRepository ;
     private  final CategoryRepository categoryRepository;
@@ -23,19 +25,21 @@ public class ProductService implements  IProductService {
     }
     @Override
     public Product addProduct(AddProductRequest request) {
+
         // check if the Product is found in the DB
         // If Yes  , set it as the new Product Category
         // If No ,then save it as a new Category
         Category category = Optional.ofNullable(categoryRepository.findByName(request.getCategory().getName()))
                 .orElseGet(() -> {
-                    Category newcategory = categoryRepository.findByName(request.getCategory().getName());
-                            return categoryRepository.save(newcategory);
-                        }
-                    );
+                    Category newcategory = new Category();
+                    newcategory.setName(request.getCategory().getName());
+                    return categoryRepository.save(newcategory);
+                });
+
         // then set as a new product category
         request.setCategory(category);
 
-        return productRepository.save(createProduct(request,category)) ;
+        return productRepository.save(createProduct(request,category));
     }
 
     private Product createProduct(AddProductRequest request , Category category)
