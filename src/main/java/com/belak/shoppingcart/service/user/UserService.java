@@ -16,6 +16,8 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,6 +30,7 @@ public class UserService implements  IUserService{
     private  final ModelMapper modelMapper ;
     private final ICartService cartService ;
     private final IOrderService orderService;
+    private final PasswordEncoder passwordEncoder ;
     @Override
     public User getUserById(Long userId) {
         return userRepository.findById(userId)
@@ -41,7 +44,7 @@ public class UserService implements  IUserService{
                 .map(req ->{
                     User user = new User();
                     user.setEmail(request.getEmail());
-                    user.setPassword(request.getPassword());
+                    user.setPassword(passwordEncoder.encode(req.getPassword()));
                     user.setFirstName(request.getFirstName());
                     user.setLastName(request.getLastName());
                     return userRepository.save(user);

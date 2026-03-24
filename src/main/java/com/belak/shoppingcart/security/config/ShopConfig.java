@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -27,10 +28,13 @@ import java.util.concurrent.CopyOnWriteArraySet;
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
+@EnableMethodSecurity(prePostEnabled = true)
 public class ShopConfig {
-    private static final List<String> SECURED_URLS = List.of("") ;
+    private static final List<String> SECURED_URLS = List.of("/api/v1/carts/**",
+            "/api/v1/cartItems/**") ;
     private final ShopUserDetailsService userDetailsService ;
     private final JwtAuthEntryPoint authEntryPoint;
+
     @Bean
     public ModelMapper modelMapper()
     {
