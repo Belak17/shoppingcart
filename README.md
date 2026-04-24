@@ -20,7 +20,14 @@ browse products, add them to a cart, and place orders, while administrators can 
 - Shopping cart functionality
 - Order Processing
 - Restful Api Design
-- DataBase Persistence with JPA and Hibernate 
+- DataBase Persistence with JPA and Hibernate
+
+## Security
+This project uses Spring Security for authentication and authorization.
+- Authentication is handled using JWT (JSON Web Token)
+- Passwords are encrypted using BCrypt
+- Role-based access control is implemented (ADMIN / USER)
+- Protected endpoints require a valid JWT token
 
 ## 📸 Screenshots
 
