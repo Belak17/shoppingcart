@@ -4,6 +4,8 @@
 This project is a backend application designed to handle the core functionality of an e-commerce shopping cart 
 system.It provides RESTful APIs for managing products, users, and cart operations. The system allows users to 
 browse products, add them to a cart, and place orders, while administrators can manage products and users.
+## Class Diagramm
+<img width="824" height="434" alt="image" src="https://github.com/user-attachments/assets/07ca0a8d-9c3a-4b4e-8963-198a18be0d76" />
 
 ## Technologies Used
 - Java
