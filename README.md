@@ -20,8 +20,51 @@ browse products, add them to a cart, and place orders, while administrators can 
 - Restful Api Design
 - DataBase Persistence with JPA and Hibernate 
 
-##  Screenshots
-![Home](docs/home.png)
+## 📸 Screenshots
+
+### Login
+<img width="1425" height="1020" alt="login" src="https://github.com/user-attachments/assets/3281a15a-15b1-4282-9e4b-a51ef308bf2a" />
+
+---
+
+### Get user by id
+<img width="1432" height="1010" alt="getuserbyid" src="https://github.com/user-attachments/assets/e9ea0222-75bf-4aef-8302-eb7f928944da" />
+
+---
+
+### Place Order
+<img width="1424" height="1006" alt="placeorder" src="https://github.com/user-attachments/assets/085adbe5-5eea-41bb-a4e9-f9e808b5114e" />
+
+
+---
+
+### Get order
+<img width="1431" height="1014" alt="getorder" src="https://github.com/user-attachments/assets/783cffff-e0e1-4d67-bd84-5a869f6dc206" />
+
+
+---
+
+### Get all products
+<img width="1425" height="1028" alt="getallproducts" src="https://github.com/user-attachments/assets/b1833011-2e14-4de7-825d-58cfd39eeaa0" />
+
+---
+
+### Add new products
+<img width="1420" height="1008" alt="addnewproduct" src="https://github.com/user-attachments/assets/52cf7870-9cb3-4de1-b8a7-b2e3f9d3344a" />
+
+---
+
+### Update Item Quantity
+<img width="1408" height="997" alt="updateitemquantiylogin" src="https://github.com/user-attachments/assets/90f86f4f-02f3-4505-80b8-74269695c655" />
+
+---
+
+### Update Item quantity without login 
+<img width="1431" height="1015" alt="updateitemquantity" src="https://github.com/user-attachments/assets/eeeda8d8-8fc5-4c63-8bef-dfc77e1484bf" />
+
+
+
+
 
 ## Project Structure
 - MVC Architecture
