@@ -13,6 +13,7 @@ browse products, add them to a cart, and place orders, while administrators can 
 - PostgreSql
 - Spring Data JPA
 - Hibernate
+- Spring Security 
 
 ##  Features
 -User management (create, update, delete users)
