@@ -30,7 +30,7 @@ This project uses Spring Security for authentication and authorization.
 - Role-based access control is implemented (ADMIN / USER)
 - Protected endpoints require a valid JWT token
 
-## 📸 Screenshots
+## Screenshots
 
 ### Login
 <img width="1425" height="1020" alt="login" src="https://github.com/user-attachments/assets/3281a15a-15b1-4282-9e4b-a51ef308bf2a" />
