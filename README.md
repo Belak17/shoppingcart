@@ -1,5 +1,5 @@
 # Shopping Cart Backend System 
-##  A Shopping cart Backend System for an E-Commerce Application built following a video on freeCodeCamp
+##  A Shopping cart Backend System for an E-Commerce Application 
 ##  Description
 This project is a backend application designed to handle the core functionality of an e-commerce shopping cart 
 system.It provides RESTful APIs for managing products, users, and cart operations. The system allows users to 
