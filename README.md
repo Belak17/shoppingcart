@@ -1,123 +1,372 @@
-# Shopping Cart Backend System 
-##  A Shopping cart Backend System for an E-Commerce Application 
-##  Description
-This project is a backend application designed to handle the core functionality of an e-commerce shopping cart 
-system.It provides RESTful APIs for managing products, users, and cart operations. The system allows users to 
-browse products, add them to a cart, and place orders, while administrators can manage products and users.
-## Class Diagramm
-<img width="824" height="434" alt="image" src="https://github.com/user-attachments/assets/07ca0a8d-9c3a-4b4e-8963-198a18be0d76" />
+#  Shopping Cart Backend System
 
-## Technologies Used
-- Java
-- Spring Boot
-- PostgreSql
+[![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=flat&logo=openjdk&logoColor=white)](https://www.java.com/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Framework-6DB33F?style=flat&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Hibernate](https://img.shields.io/badge/Hibernate-ORM-59666C?style=flat&logo=hibernate&logoColor=white)](https://hibernate.org/)
+[![Spring Security](https://img.shields.io/badge/Spring%20Security-JWT-6DB33F?style=flat&logo=springsecurity&logoColor=white)](https://spring.io/projects/spring-security)
+
+> A robust backend system for an e-commerce application built with Spring Boot, featuring secure authentication, shopping cart management, product handling, and order processing.
+
+---
+
+#  Table of Contents
+
+- [About](#-about)
+- [Features](#-features)
+- [Security](#-security)
+- [Technologies](#-technologies-used)
+- [Architecture](#-architecture)
+- [Class Diagram](#-class-diagram)
+- [Screenshots](#-screenshots)
+- [Installation](#-installation)
+- [API Testing](#-api-testing)
+- [Project Structure](#-project-structure)
+- [Future Improvements](#-future-improvements)
+- [Contributing](#-contributing)
+- [Author](#-author)
+
+---
+
+#  About
+
+Shopping Cart Backend System is a backend application designed to handle the core functionalities of an e-commerce platform.
+
+The application provides secure and scalable RESTful APIs for:
+
+-  Product management
+-  User management
+-  Shopping cart operations
+-  Order processing
+-  Authentication & authorization
+
+The system follows modern backend development practices using **Spring Boot**, **Spring Security**, and **PostgreSQL**.
+
+---
+
+#  Features
+
+##  User Management
+- Create users
+- Update user information
+- Delete users
+- User authentication
+- Role management
+
+##  Product Management
+- Add products
+- Update products
+- Delete products
+- Retrieve all products
+- Product search functionality
+
+##  Shopping Cart System
+- Add items to cart
+- Update item quantity
+- Remove items from cart
+- View cart details
+
+##  Order Processing
+- Place orders
+- Retrieve orders
+- Track order details
+
+## 🔗 REST API
+- RESTful API architecture
+- JSON-based communication
+- Layered backend structure
+
+## 🗄 Database Persistence
 - Spring Data JPA
-- Hibernate
-- Spring Security 
+- Hibernate ORM
+- PostgreSQL integration
 
-##  Features
--User management (create, update, delete users)
-- Product management (CRUD operations)
-- Shopping cart functionality
-- Order Processing
-- Restful Api Design
-- DataBase Persistence with JPA and Hibernate
+---
 
-## Security
-This project uses Spring Security for authentication and authorization.
-- Authentication is handled using JWT (JSON Web Token)
-- Passwords are encrypted using BCrypt
-- Role-based access control is implemented (ADMIN / USER)
-- Protected endpoints require a valid JWT token
+#  Security
 
-## Screenshots
+This project uses **Spring Security** for authentication and authorization.
 
-### Login
+### Security Features
+
+- JWT Authentication
+- BCrypt password encryption
+- Role-based access control (**ADMIN / USER**)
+- Protected REST endpoints
+- Stateless authentication system
+
+### Authentication Flow
+
+```text
+User Login → JWT Token Generation → Token Validation → Access Protected APIs
+```
+
+---
+
+#  Technologies Used
+
+## Backend
+- **Java**
+- **Spring Boot**
+- **Spring Security**
+- **Spring Data JPA**
+- **Hibernate**
+
+## Database
+- **PostgreSQL**
+
+## API Testing
+- **Postman**
+
+## Development Tools
+- **Maven**
+- **Git & GitHub**
+- **IntelliJ IDEA / Eclipse**
+
+---
+
+#  Architecture
+
+The project follows a layered backend architecture.
+
+```text
+┌────────────────────┐
+│   Controller Layer │ → REST API Endpoints
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│    Service Layer   │ → Business Logic
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│  Repository Layer  │ → Database Access
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│    PostgreSQL DB   │
+└────────────────────┘
+```
+
+---
+
+#  Class Diagram
+
+<img width="824" height="434" alt="Class Diagram" src="https://github.com/user-attachments/assets/07ca0a8d-9c3a-4b4e-8963-198a18be0d76" />
+
+---
+
+#  Screenshots
+
+##  Login
 <img width="1425" height="1020" alt="login" src="https://github.com/user-attachments/assets/3281a15a-15b1-4282-9e4b-a51ef308bf2a" />
 
 ---
 
-### Get user by id
+##  Get User By ID
 <img width="1432" height="1010" alt="getuserbyid" src="https://github.com/user-attachments/assets/e9ea0222-75bf-4aef-8302-eb7f928944da" />
 
 ---
 
-### Place Order
+##  Place Order
 <img width="1424" height="1006" alt="placeorder" src="https://github.com/user-attachments/assets/085adbe5-5eea-41bb-a4e9-f9e808b5114e" />
 
-
 ---
 
-### Get order
+##  Get Order
 <img width="1431" height="1014" alt="getorder" src="https://github.com/user-attachments/assets/783cffff-e0e1-4d67-bd84-5a869f6dc206" />
 
-
 ---
 
-### Get all products
+##  Get All Products
 <img width="1425" height="1028" alt="getallproducts" src="https://github.com/user-attachments/assets/b1833011-2e14-4de7-825d-58cfd39eeaa0" />
 
 ---
 
-### Add new products
+##  Add New Product
 <img width="1420" height="1008" alt="addnewproduct" src="https://github.com/user-attachments/assets/52cf7870-9cb3-4de1-b8a7-b2e3f9d3344a" />
 
 ---
 
-### Update Item Quantity
-<img width="1408" height="997" alt="updateitemquantiylogin" src="https://github.com/user-attachments/assets/90f86f4f-02f3-4505-80b8-74269695c655" />
+##  Update Item Quantity
+<img width="1408" height="997" alt="updateitemquantitylogin" src="https://github.com/user-attachments/assets/90f86f4f-02f3-4505-80b8-74269695c655" />
 
 ---
 
-### Update Item quantity without login 
+##  Update Item Quantity Without Login
 <img width="1431" height="1015" alt="updateitemquantity" src="https://github.com/user-attachments/assets/eeeda8d8-8fc5-4c63-8bef-dfc77e1484bf" />
 
+---
 
+#  Installation
 
+## Prerequisites
 
+Make sure you have installed:
 
-## Project Structure
-- MVC Architecture
-- Controller layer (REST endpoints)
-- Service layer (business logic)
-- Repository layer (Spring Data JPA)
+- Java JDK 17+
+- PostgreSQL
+- Maven
+- Git
+- IntelliJ IDEA or Eclipse
 
+---
 
-##  Development Setup
+#  Clone the Repository
 
-1. Clone the repository:
-git clone https://github.com/Belak17/shoppingcart
+```bash
+git clone https://github.com/Belak17/shoppingcart.git
+cd shoppingcart
+```
 
-2. Open the project in IntelliJ IDEA or Eclipse
+---
 
-3. Configure the database in application.properties
-   - spring.datasource.url=jdbc:postgresql://localhost:5432/your_db
-   - spring.datasource.username=your_username
-   - spring.datasource.password=your_password
-   - spring.jpa.hibernate.ddl-auto=update
+#  Configure the Database
 
-5. Build the project using Maven
+Update your `application.properties` file:
 
-6. Run the application
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_db
+spring.datasource.username=your_username
+spring.datasource.password=your_password
 
-7. Test APIs using Postman or any REST client
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
 
-## How to tweak this project for your own uses 
-Since this is a minimal system for the management of a library , I'd encourage you to clone this repository and 
-rename it to user your onw boilerpate . Its a good starter for those who want to create an e-commerce application 
-system 
+---
 
-## Contributions
+#  Build the Project
+
+```bash
+mvn clean install
+```
+
+---
+
+#  Run the Application
+
+```bash
+mvn spring-boot:run
+```
+
+The server will start on:
+
+```text
+http://localhost:8080
+```
+
+---
+
+#  API Testing
+
+You can test the APIs using:
+
+- Postman
+- Insomnia
+- Swagger (if enabled)
+
+### Example Authentication Flow
+
+1. Login using credentials
+2. Receive JWT token
+3. Add token to Authorization header
+
+```text
+Authorization: Bearer your_token
+```
+
+4. Access protected endpoints
+
+---
+
+#  Project Structure
+
+```text
+shoppingcart/
+│
+├── src/main/java/
+│   ├── controller/
+│   ├── service/
+│   ├── repository/
+│   ├── model/
+│   ├── security/
+│   └── config/
+│
+├── src/main/resources/
+│   └── application.properties
+│
+├── pom.xml
+└── README.md
+```
+
+---
+
+#  Future Improvements
+
+- Payment gateway integration
+- Product image upload
+- Email notifications
+- Swagger API documentation
+- Docker support
+- Microservices architecture
+- Redis caching
+- Unit and integration testing
+
+---
+
+#  Contributing
+
 Contributions are welcome!
+
+## Steps
+
 1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Submit a pull request
 
-## Find a bug 
-If you found an issue or would like to submit an improvement to this project , please submit an issue  using the 
-issues tab abaove . If you would like to submit a PR with a fix , reference the issues you corrected
+2. Create a feature branch
 
-## 👤 Author
-- Kaleb AKAKPO
-- LinkedIn Profile : https://www.linkedin.com/in/kaleb-akakpo-5a9431355/
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push the branch
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+#  Report Issues
+
+If you find a bug or would like to suggest improvements, feel free to open an issue in the repository.
+
+---
+
+#  Author
+
+## Kaleb AKAKPO
+
+- Backend Developer
+- Java & Spring Boot Enthusiast
+
+###  LinkedIn
+[LinkedIn Profile](https://www.linkedin.com/in/kaleb-akakpo-5a9431355/)
+
+---
+
+<div align="center">
+
+###  If you like this project, consider giving it a star on GitHub!
+
+</div>
