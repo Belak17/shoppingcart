@@ -12,19 +12,19 @@
 
 #  Table of Contents
 
-- [About](#-about)
-- [Features](#-features)
-- [Security](#-security)
-- [Technologies](#-technologies-used)
-- [Architecture](#-architecture)
-- [Class Diagram](#-class-diagram)
-- [Screenshots](#-screenshots)
-- [Installation](#-installation)
-- [API Testing](#-api-testing)
-- [Project Structure](#-project-structure)
-- [Future Improvements](#-future-improvements)
-- [Contributing](#-contributing)
-- [Author](#-author)
+- [About](#about)
+- [Features](#features)
+- [Security](#security)
+- [Technologies](#technologies-used)
+- [Architecture](#architecture)
+- [Class Diagram](#class-diagram)
+- [Screenshots](#screenshots)
+- [Installation](#installation)
+- [API Testing](#api-testing)
+- [Project Structure](#project-structure)
+- [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
+- [Author](#author)
 
 ---
 
